@@ -2,7 +2,7 @@
 
 Explorations and implementations of attacks against the Elliptic Curve Discrete Logarithm Problem (ECDLP) on curves with weak parameters, built with **SageMath**.
 
-- **SC4010 Project:** [Smart's Attack](#project-smarts-attack-anomalous-curves) targeting **anomalous elliptic curves** ($|\#E(\mathbb{F}_p)| = p$, trace of Frobenius $t = 1$).
+- **SC4010 Project:** [Smart's Attack](#project-smarts-attack-anomalous-curves) targeting **anomalous elliptic curves** ($\\#E(\mathbb{F}_p) = p$, trace of Frobenius $t = 1$).
 - **Personal Interest:** [Pohlig-Hellman Attack](#personal-interest-pohlig-hellman-attack-smooth-order-curves) targeting **smooth-order elliptic curves** whose group order factors into small primes.
 
 ---
@@ -29,7 +29,7 @@ Explorations and implementations of attacks against the Elliptic Curve Discrete 
 
 ## Project: Smart's Attack (Anomalous Curves)
 
-An elliptic curve $E / \mathbb{F}_p$ is **anomalous** when its order equals the field characteristic ($|E(\mathbb{F}_p)| = p$). Smart's attack solves $Q = mP$ in polynomial time by lifting the curve and points to the $p$-adic numbers $\mathbb{Q}_p$.
+An elliptic curve $E / \mathbb{F}_p$ is **anomalous** when its order equals the field characteristic ($\\#E(\mathbb{F}_p) = p$). Smart's attack solves $Q = mP$ in polynomial time by lifting the curve and points to the $p$-adic numbers $\mathbb{Q}_p$.
 
 ### Implementation ([`smart_attack.py`](smart_attack.py))
 
