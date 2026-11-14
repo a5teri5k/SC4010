@@ -1,15 +1,15 @@
-# SC4010 — ECDLP Weak Parameters
+# SC4010 ECDLP Weak Parameters
 
 Explorations and implementations of attacks against the Elliptic Curve Discrete Logarithm Problem (ECDLP) on curves with weak parameters, built with **SageMath**.
 
-- **SC4010 Project:** [Smart's Attack](#project-smarts-attack-anomalous-curves) targeting **anomalous elliptic curves** ($\#E(\mathbb{F}_p) = p$, trace of Frobenius $t = 1$).
+- **SC4010 Project:** [Smart's Attack](#project-smarts-attack-anomalous-curves) targeting **anomalous elliptic curves** ($|\#E(\mathbb{F}_p)| = p$, trace of Frobenius $t = 1$).
 - **Personal Interest:** [Pohlig-Hellman Attack](#personal-interest-pohlig-hellman-attack-smooth-order-curves) targeting **smooth-order elliptic curves** whose group order factors into small primes.
 
 ---
 
 ## Repository Structure
 
-### Project — Smart's Attack (Anomalous Curves)
+### Project: Smart's Attack (Anomalous Curves)
 
 | File | Description |
 | :--- | :--- |
@@ -19,7 +19,7 @@ Explorations and implementations of attacks against the Elliptic Curve Discrete 
 | [`384-bit Generated Anomalous.ipynb`](384-bit%20Generated%20Anomalous.ipynb) | Attack script for a 384-bit anomalous curve generated using `ecgen`. |
 | [`anomalous.json`](anomalous.json) | Raw `ecgen` JSON parameters (`p`, `a`, `b`, `order`, and base point) for the 384-bit anomalous curve. |
 
-### Personal Interest — Pohlig–Hellman Attack
+### Personal Interest: Pohlig–Hellman Attack
 
 | File | Description |
 | :--- | :--- |
@@ -29,7 +29,7 @@ Explorations and implementations of attacks against the Elliptic Curve Discrete 
 
 ## Project: Smart's Attack (Anomalous Curves)
 
-An elliptic curve $E / \mathbb{F}_p$ is **anomalous** when its order equals the field characteristic ($\#E(\mathbb{F}_p) = p$). Smart's attack solves $Q = mP$ in polynomial time by lifting the curve and points to the $p$-adic numbers $\mathbb{Q}_p$.
+An elliptic curve $E / \mathbb{F}_p$ is **anomalous** when its order equals the field characteristic ($|E(\mathbb{F}_p)| = p$). Smart's attack solves $Q = mP$ in polynomial time by lifting the curve and points to the $p$-adic numbers $\mathbb{Q}_p$.
 
 ### Implementation ([`smart_attack.py`](smart_attack.py))
 
@@ -99,6 +99,6 @@ assert m * P == Q
 
 ## References
 
-- Nigel P. Smart, *"The Discrete Logarithm Problem on Elliptic Curves of Trace One"*, Journal of Cryptology, 1999 — [SpringerLink](https://link.springer.com/article/10.1007/s001459900052)
-- SafeCurves — [safecurves.cr.yp.to](https://safecurves.cr.yp.to/)
-- `ecgen` (Elliptic Curve Generator) — [neuromancer.sk/page/ecgen](https://neuromancer.sk/page/ecgen) · [GitHub](https://github.com/J08nY/ecgen)
+- Nigel P. Smart, *"The Discrete Logarithm Problem on Elliptic Curves of Trace One"*, Journal of Cryptology, 1999 - [SpringerLink](https://link.springer.com/article/10.1007/s001459900052)
+- SafeCurves - [safecurves.cr.yp.to](https://safecurves.cr.yp.to/)
+- `ecgen` (Elliptic Curve Generator) - [neuromancer.sk/page/ecgen](https://neuromancer.sk/page/ecgen) · [GitHub](https://github.com/J08nY/ecgen)
