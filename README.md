@@ -24,6 +24,7 @@ Explorations and implementations of attacks against the Elliptic Curve Discrete 
 | File | Description |
 | :--- | :--- |
 | [`Pohlig-Hellman.ipynb`](Pohlig-Hellman.ipynb) | Standalone implementation of the Pohlig–Hellman attack on a 128-bit smooth-order elliptic curve, verified against SageMath's `Q.log(P)`. |
+| [`Pohlig-Hellman-224bit.ipynb`](Pohlig-Hellman-224bit.ipynb) | Attack script for a 224-bit smooth-order elliptic curve generated using `ecgen`. |
 
 ---
 
@@ -62,6 +63,8 @@ Done separately out of personal interest, [`Pohlig-Hellman.ipynb`](Pohlig-Hellma
 2. Projects $P$ and $Q = nP$ into each prime-order subgroup via `m = order(P) // i[0]` and solves each small subgroup DLP by iterating `j` until `j * mP == mQ`.
 3. Recombines all subgroup residues using the Chinese Remainder Theorem (`CRT_list(residues, moduli)`).
 4. Verifies that the recovered key `k` matches both the secret `n` and SageMath's built-in `Q.log(P)`.
+
+[`Pohlig-Hellman-224bit.ipynb`](Pohlig-Hellman-224bit.ipynb) works on 224-bit curve.
 
 ---
 
