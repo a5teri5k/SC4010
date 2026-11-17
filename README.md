@@ -64,7 +64,7 @@ Done separately out of personal interest, [`Pohlig-Hellman.ipynb`](Pohlig-Hellma
 3. Recombines all subgroup residues using the Chinese Remainder Theorem (`CRT_list(residues, moduli)`).
 4. Verifies that the recovered key `k` matches both the secret `n` and SageMath's built-in `Q.log(P)`.
 
-[`Pohlig-Hellman-224bit.ipynb`](Pohlig-Hellman-224bit.ipynb) works on 224-bit curve.
+[`Pohlig-Hellman-224bit.ipynb`](Pohlig-Hellman-224bit.ipynb) demonstrates on a 224-bit curve generated with `ecgen`.
 
 ---
 
